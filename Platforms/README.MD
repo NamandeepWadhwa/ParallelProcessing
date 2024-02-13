@@ -1,0 +1,1 @@
+In this workshop I have installed intel compiler and used both Visual Studio compiler and intel compiler to  ran a simple program which calculates the vector magnitude using parallel processing by OPEN MP

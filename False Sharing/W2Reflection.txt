@@ -1,0 +1,9 @@
+This workshop introduces us to parallel programming using OpenMP. In this workshop the serial version of the integral (1/(1+x^2)) was given which was then multiplied by 4 which gave use pie. Our task was to implement three parallel programming techniques and improve the efficiency of the program.
+The three Methods that we implemented were-
+1) Naive- In this method we made an array which was then shared among different threads. Each thread calculated the sum and stored in the array. The problem with this method was each thread was using the same cache line, due to which each thread needs to communicate with each other hence taking longer time
+
+2) Padded- In this method we used the 2d array so that each thread can maintain its own cache which will reduce the time as now each thread does not need to communicate with each other, however there is drawback- It uses more memory and some of the memory is unused. 
+
+3) Synchronized- In this method we did not uses any array. Each thread calculates its own sum and then only one thread is stores the value of sum into pie. Which solves the problem caused by both Naive and Padded solution. 
+
+One of the problem I faced is that  I accidently put the  pi+= 4*sum*setpSize in the for loop  in synchronized solution should have been put after the for loop. Although the program was in parallel but this resulted in the efficiency of thread 1, but after going through notes again I realised my mistake and was able to come up with the correct solution. 

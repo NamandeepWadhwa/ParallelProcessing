@@ -1,0 +1,1 @@
+I have learned parallel processing using OPENMP and MPI. I have learned how to implement different parallel processing algorithms. I have learned all these in my fifth semester. I will be uploading each workshop every week. 
